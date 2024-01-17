@@ -22,26 +22,27 @@ The dataset `adjusted_retail_sales_data_v2.csv` includes the following columns:
 - Libraries: pandas, numpy, matplotlib, seaborn (for data analysis and visualization)
 - Jupyter Notebook or similar Python IDE
 
-## Installation
-
+## Installation and Setup
+To run this project, you will need to install its dependencies. This project uses a requirements.txt file to manage these dependencies.
 Instructions for setting up the project environment:
 
+1. Clone the Repository: First, clone this repository to your local machine using:
 ```bash
-# Clone the repository
 git clone https://github.com/thekonang/Final-Project-TechPro-DS.git
 ```
 
-# Usage
-
-Navigate to the project directory and start Jupyter Notebook:
-
+2. Install Dependencies: Navigate to the project directory and install the required Python packages:
 ```bash
 cd Final-Project-TechPro-DS
-jypyter notebook
+pip install -r requirements.txt
 ```
+This command will install all the packages listed in the requirements.txt file.
 
-Open the DataAnalysis.ipynb notebook and run the cells to see the analysis.
-
+# Running the Project:
+After installing the dependencies, you can run the project with: 
+```bash
+jupyter notebook DataAnalysis.ipynb
+```
 # Project Structure
 
 - DataAnalysis.ipynb: Jupyter Notebook containing the data analysis, visualization, and modeling.
