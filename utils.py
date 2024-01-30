@@ -67,30 +67,50 @@ def convert_data_types(df, date_cols=[], numeric_cols=[], categorical_cols=[]):
     return df
 
 
-def filter_data(df, col, valid_values, min_value=None, max_value=None):
+def filter_data(df, col, valid_values=None, min_value=None, max_value=None):
     """
-    Filter DataFrame based on valid values in a column.
-    Handles both categorical and numerical data.
+    Filters a DataFrame based on the valid values for a given column.
 
     Args:
-        df (pandas DataFrame): _description_
-        col (str): Column name to filter on
-        valid_values (list): List of valid values for categorical data
-        min_value (int, optional): Minimum value for numerical data. Defaults to None.
-        max_value (int, optional): Maximum value for numerical data. Defaults to None.
+        df (pandas.DataFrame): The DataFrame to be filtered.
+        col (str): The name of the column to filter on.
+        valid_values (list, optional): A list of valid values for categorical data.
+        min_value (int, optional): The minimum value for numerical data.
+        max_value (int, optional): The maximum value for numerical data.
 
     Returns:
-        pandas DataFrame: Filtered DataFrame
+        pandas.DataFrame: A DataFrame filtered based on the specified criteria.
     """
-    if df[col].dtype == "O":  # Object type, typical of categorical data
-        return df[df[col].isin(valid_values)]
-    elif pd.api.types.is_numeric_dtype(df[col]):
-        if min_value is not None and max_value is not None:
-            return df[(df[col] >= min_value) & (df[col] <= max_value)]
-        elif min_value is not None:
-            return df[df[col] >= min_value]
-        elif max_value is not None:
-            return df[df[col] <= max_value]
+
+    def filter_categorical(dataframe, column, values):
+        filtered_df = dataframe[dataframe[column].isin(values)].copy()  # Explicit copy
+        filtered_df[column] = filtered_df[column].cat.remove_unused_categories()
+        return filtered_df
+
+    def filter_numerical(dataframe, column, min_val, max_val):
+        if min_val is not None and max_val is not None:
+            return dataframe[(dataframe[column] >= min_val) & (dataframe[column] <= max_val)]
+        if min_val is not None :
+            return dataframe[dataframe[column] >= min_val]
+        if max_val is not None:
+            return dataframe[dataframe[column] <= max_val]
+        return dataframe
+
+    if col not in df.columns:
+        raise ValueError(f"Column '{col}' not found in DataFrame.")
+
+    data_type_handlers = {
+        'object': lambda df, col, val: filter_categorical(df, col, val),
+        'category': lambda df, col, val: filter_categorical(df, col, val),
+        'numeric': lambda df, col, min_val, max_val: filter_numerical(df, col, min_val, max_val)
+    }
+
+    data_type = df[col].dtype
+    if data_type == 'object' or data_type.name == 'category':
+        return data_type_handlers[data_type.name](df, col, valid_values)
+    elif pd.api.types.is_numeric_dtype(data_type):
+        return data_type_handlers['numeric'](df, col, min_value, max_value)
+
     return df
 
 
