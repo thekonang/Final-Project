@@ -49,3 +49,66 @@
 2024-02-04 12:47:04,172 - INFO - Plot 'Average Sales per Product Category' created successfully.
 2024-02-04 12:47:04,301 - INFO - Plot 'Total Sales per Product Category' created successfully.
 2024-02-04 12:47:07,628 - INFO - Plot 'Average Sales per Customer Location' created successfully.
+2024-02-04 13:25:27,903 - INFO - Starting data type conversion.
+2024-02-04 13:25:27,904 - INFO - Converting SalesDate to datetime.
+2024-02-04 13:25:27,907 - INFO - Converting SalesAmount to numeric.
+2024-02-04 13:25:27,908 - INFO - Converting CustomerAge to numeric.
+2024-02-04 13:25:27,908 - INFO - Converting ProductRatings to numeric.
+2024-02-04 13:25:27,909 - INFO - Converting ProductCategory to category.
+2024-02-04 13:25:27,910 - INFO - Converting CustomerGender to category.
+2024-02-04 13:25:27,911 - INFO - Converting CustomerLocation to category.
+2024-02-04 13:25:27,912 - INFO - Data type conversion successful.
+2024-02-04 13:25:27,921 - INFO - Descriptive statistics successfully printed.
+2024-02-04 13:25:27,923 - INFO - Value counts for column 'ProductCategory' printed.
+2024-02-04 13:25:27,923 - INFO - Value counts for column 'CustomerGender' printed.
+2024-02-04 13:25:27,924 - INFO - Value counts for column 'CustomerLocation' printed.
+2024-02-04 13:25:27,925 - INFO - Found rows with missing values: 13 rows
+2024-02-04 13:25:27,926 - INFO - NaN or null value found: NaT
+2024-02-04 13:25:27,926 - INFO - NaN or null value found: NaT
+2024-02-04 13:25:27,926 - INFO - NaN or null value found: NaT
+2024-02-04 13:25:27,926 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,927 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,927 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,927 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,927 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,927 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,927 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,927 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,927 - INFO - NaN or null value found: nan
+2024-02-04 13:25:27,931 - INFO - Starting potential outliers analysis.
+2024-02-04 13:25:27,932 - WARNING - Outliers detected in column 'SalesAmount'.
+2024-02-04 13:25:27,933 - WARNING - Outliers detected in column 'CustomerAge'.
+2024-02-04 13:25:27,933 - WARNING - Outliers detected in column 'ProductRatings'.
+2024-02-04 13:25:27,933 - INFO - Outliers analysis completed.
+2024-02-04 13:25:27,945 - INFO - Categorical filtering applied on 'ProductCategory'. Rows before: 995, Rows after: 994
+2024-02-04 13:25:27,946 - INFO - Categorical filtering applied on 'CustomerGender'. Rows before: 994, Rows after: 970
+2024-02-04 13:25:27,947 - INFO - Categorical filtering applied on 'CustomerLocation'. Rows before: 970, Rows after: 970
+2024-02-04 13:25:27,948 - INFO - Numerical filtering applied on 'ProductRatings'. Rows before: 970, Rows after: 967
+2024-02-04 13:25:27,948 - INFO - Numerical filtering applied on 'CustomerAge'. Rows before: 967, Rows after: 957
+2024-02-04 13:25:27,950 - INFO - Removed 1 outliers from 'SalesAmount' using IQR method.
+2024-02-04 13:25:27,950 - INFO - Starting data type conversion.
+2024-02-04 13:25:27,950 - INFO - Converting SalesDate to datetime.
+2024-02-04 13:25:27,951 - INFO - Converting SalesAmount to numeric.
+2024-02-04 13:25:27,951 - INFO - Converting ProductRatings to numeric.
+2024-02-04 13:25:27,951 - INFO - Data type conversion successful.
+2024-02-04 13:25:27,964 - INFO - Descriptive statistics successfully printed.
+2024-02-04 13:25:27,964 - INFO - Starting potential outliers analysis.
+2024-02-04 13:25:27,964 - WARNING - Outliers detected in column 'SalesAmount'.
+2024-02-04 13:25:27,964 - WARNING - Outliers detected in column 'CustomerAge'.
+2024-02-04 13:25:27,964 - WARNING - Outliers detected in column 'ProductRatings'.
+2024-02-04 13:25:27,964 - INFO - Outliers analysis completed.
+2024-02-04 13:25:28,789 - INFO - Plot 'Average Sales per Product Category' created successfully.
+2024-02-04 13:25:28,961 - INFO - Plot 'Total Sales per Product Category' created successfully.
+2024-02-04 13:31:11,336 - INFO - Plot 'Average Sales per Product Category' created successfully.
+2024-02-04 13:31:11,601 - INFO - Plot 'Total Sales per Product Category' created successfully.
+2024-02-04 13:31:11,611 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-02-04 13:31:11,615 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-02-04 13:31:11,717 - INFO - Plot 'Total Sales per Customer Age' created successfully.
+2024-02-04 13:31:33,353 - INFO - Plot 'Average Sales per Product Category' created successfully.
+2024-02-04 13:31:33,552 - INFO - Plot 'Total Sales per Product Category' created successfully.
+2024-02-04 13:31:33,565 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-02-04 13:31:33,568 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-02-04 13:31:33,686 - INFO - Plot 'Total Sales per Customer Age' created successfully.
+2024-02-04 13:31:33,700 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-02-04 13:31:33,704 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-02-04 13:31:33,819 - INFO - Plot 'Average Sales per Customer Age' created successfully.
