@@ -1,0 +1,51 @@
+2024-02-04 12:47:03,287 - INFO - Starting data type conversion.
+2024-02-04 12:47:03,287 - INFO - Converting SalesDate to datetime.
+2024-02-04 12:47:03,290 - INFO - Converting SalesAmount to numeric.
+2024-02-04 12:47:03,292 - INFO - Converting CustomerAge to numeric.
+2024-02-04 12:47:03,292 - INFO - Converting ProductRatings to numeric.
+2024-02-04 12:47:03,293 - INFO - Converting ProductCategory to category.
+2024-02-04 12:47:03,294 - INFO - Converting CustomerGender to category.
+2024-02-04 12:47:03,294 - INFO - Converting CustomerLocation to category.
+2024-02-04 12:47:03,295 - INFO - Data type conversion successful.
+2024-02-04 12:47:03,307 - INFO - Descriptive statistics successfully printed.
+2024-02-04 12:47:03,309 - INFO - Value counts for column 'ProductCategory' printed.
+2024-02-04 12:47:03,310 - INFO - Value counts for column 'CustomerGender' printed.
+2024-02-04 12:47:03,310 - INFO - Value counts for column 'CustomerLocation' printed.
+2024-02-04 12:47:03,311 - INFO - Found rows with missing values: 13 rows
+2024-02-04 12:47:03,372 - INFO - NaN or null value found: NaT
+2024-02-04 12:47:03,373 - INFO - NaN or null value found: NaT
+2024-02-04 12:47:03,373 - INFO - NaN or null value found: NaT
+2024-02-04 12:47:03,374 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,374 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,374 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,374 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,374 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,374 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,375 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,376 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,376 - INFO - NaN or null value found: nan
+2024-02-04 12:47:03,384 - INFO - Starting potential outliers analysis.
+2024-02-04 12:47:03,385 - WARNING - Outliers detected in column 'SalesAmount'.
+2024-02-04 12:47:03,385 - WARNING - Outliers detected in column 'CustomerAge'.
+2024-02-04 12:47:03,385 - WARNING - Outliers detected in column 'ProductRatings'.
+2024-02-04 12:47:03,385 - INFO - Outliers analysis completed.
+2024-02-04 12:47:03,403 - INFO - Categorical filtering applied on 'ProductCategory'. Rows before: 995, Rows after: 994
+2024-02-04 12:47:03,406 - INFO - Categorical filtering applied on 'CustomerGender'. Rows before: 994, Rows after: 970
+2024-02-04 12:47:03,409 - INFO - Categorical filtering applied on 'CustomerLocation'. Rows before: 970, Rows after: 970
+2024-02-04 12:47:03,412 - INFO - Numerical filtering applied on 'ProductRatings'. Rows before: 970, Rows after: 967
+2024-02-04 12:47:03,413 - INFO - Numerical filtering applied on 'CustomerAge'. Rows before: 967, Rows after: 957
+2024-02-04 12:47:03,416 - INFO - Removed 1 outliers from 'SalesAmount' using IQR method.
+2024-02-04 12:47:03,416 - INFO - Starting data type conversion.
+2024-02-04 12:47:03,417 - INFO - Converting SalesDate to datetime.
+2024-02-04 12:47:03,418 - INFO - Converting SalesAmount to numeric.
+2024-02-04 12:47:03,418 - INFO - Converting ProductRatings to numeric.
+2024-02-04 12:47:03,418 - INFO - Data type conversion successful.
+2024-02-04 12:47:03,437 - INFO - Descriptive statistics successfully printed.
+2024-02-04 12:47:03,438 - INFO - Starting potential outliers analysis.
+2024-02-04 12:47:03,438 - WARNING - Outliers detected in column 'SalesAmount'.
+2024-02-04 12:47:03,438 - WARNING - Outliers detected in column 'CustomerAge'.
+2024-02-04 12:47:03,438 - WARNING - Outliers detected in column 'ProductRatings'.
+2024-02-04 12:47:03,438 - INFO - Outliers analysis completed.
+2024-02-04 12:47:04,172 - INFO - Plot 'Average Sales per Product Category' created successfully.
+2024-02-04 12:47:04,301 - INFO - Plot 'Total Sales per Product Category' created successfully.
+2024-02-04 12:47:07,628 - INFO - Plot 'Average Sales per Customer Location' created successfully.
