@@ -169,3 +169,7 @@
 2024-02-13 12:40:53,702 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2024-02-13 12:40:53,801 - INFO - Plot 'Average Sales per Customer Age' created successfully.
 2024-02-13 12:40:57,040 - INFO - Plot 'Average Sales per Customer Location' created successfully.
+2024-02-13 14:19:40,525 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-02-13 14:19:55,072 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-02-13 14:20:02,767 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-02-13 14:32:12,542 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
