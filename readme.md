@@ -47,23 +47,34 @@ jupyter notebook DataAnalysis.ipynb
 
 - DataAnalysis.ipynb: Jupyter Notebook containing the data analysis, visualization, and modeling.
 - data/: Directory containing the dataset.
+- utils.py: Python file containing helper functions for data analysis tasks such as data loading, filtering, visualization, and outlier handling.
 
-Describe how to run the project, including any scripts and command-line arguments.
 
 Data Cleaning and Preparation
 The data cleaning process involves handling missing values, addressing outliers, correcting data types, and ensuring data consistency. Detailed steps are outlined in the data_cleaning.py script.
 
 Analysis
-The project includes descriptive statistics, data visualization, inferential statistics, predictive modeling, and advanced statistical analysis. Jupyter notebooks or PowerBI reports are used for this purpose.
+The project includes descriptive statistics, data visualization, inferential statistics, predictive modeling, and advanced statistical analysis. Jupyter notebooks are used for this purpose.
+escriptive statistics were calculated using functions like describe_data and analyze_categorical_columns from utils.py
 
 Results
-Summarize key findings and insights derived from the analysis.
+K-Means clustering with various k values was performed using the kmeans_clustering function in utils.py. This helped identify customer segments with distinct purchase behaviors.
 
-Contributing
-Information on how others can contribute to the project.
+# Utilities
 
-License
+## Data handling:
+- ```load_data(file_path)```: Loads data from a file (CSV, Excel, JSON, etc.) into a pandas DataFrame.
+- ```filter_data(df, col, valid_values=None, min_value=None, max_value=None)```: Filters data based on specific criteria in a column.
+
+## Data exploration and analysis:
+
+- ```describe_data(df, cols=None)```: Calculates and prints descriptive statistics for specified columns.
+- ```analyze_categorical_columns(df, categorical_columns)```: Prints value counts and summary statistics for categorical columns.
+- ```plot_sales(data, x_col, y_col, estimator=np.sum, title='', x_label='', y_label='')```: Creates a bar plot for sales data.
+
+
+# License
 This project is licensed under the MIT License.
 
-Contact
-Provide contact information for queries or collaborations.
+# Contact
+
