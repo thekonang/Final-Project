@@ -2,7 +2,7 @@ import logging
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import numpy as np 
+import numpy as np
 
 # Configure the logging module
 logging.basicConfig(
@@ -353,3 +353,33 @@ def analyze_outliers(df, numeric_columns):
                 f"The '{col}' column may contain outliers as indicated by a high max/standard deviation ratio."
             )
     logging.info("Outliers analysis completed.")
+
+
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+
+# Define function to perform K-Means clustering
+def kmeans_clustering(data, features, k_range):
+    """
+    Performs K-Means clustering for a given k range and returns the best k based on silhouette score.
+
+    Args:
+        data (pd.DataFrame): Your sales data.
+        features (list): List of features to use for clustering.
+        k_range (list): Range of k values to try.
+
+    Returns:
+        tuple: (kmeans_model, best_k, silhouette_score)
+    """
+    best_score = -1
+    best_k = None
+    best_model = None
+    for k in k_range:
+        kmeans = KMeans(n_clusters=k, random_state=42)
+        kmeans.fit(data[features])
+        score = silhouette_score(data[features], kmeans.labels_)
+        if score > best_score:
+            best_score = score
+            best_k = k
+            best_model = kmeans
+    return best_model, best_k, best_score
