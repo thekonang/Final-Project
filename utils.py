@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
 
 # Configure the logging module
 logging.basicConfig(
@@ -354,11 +356,6 @@ def analyze_outliers(df, numeric_columns):
             )
     logging.info("Outliers analysis completed.")
 
-
-from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score
-
-# Define function to perform K-Means clustering
 def kmeans_clustering(data, features, k_range):
     """
     Performs K-Means clustering for a given k range and returns the best k based on silhouette score.
